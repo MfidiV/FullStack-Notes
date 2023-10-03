@@ -62,4 +62,73 @@ When the reading is finished, we can access the result as:
 + reader.error is the error (if failed).
 The most widely used events are for sure load and error.
 
+FileReader for blobs
+
+As mentioned in the chapter Blob, FileReadercan read not just files, but any blobs.
+
+We can use it to convert a blob to another format:
+
+readAsArrayBuffer(blob) – to ArrayBuffer,
+readAsText(blob, [encoding]) – to string (an alternative to TextDecoder),
+readAsDataURL(blob) – to base64 data url.
+FileReaderSync is available inside Web Workers
+
+For Web Workers, there also exists a synchronous variant of FileReader, called FileReaderSync.
+
+Its reading methods read* do not generate events, but rather return a result, as regular functions do.
+
+That’s only inside a Web Worker though, because delays in synchronous calls, that are possible while reading from files, in Web Workers are less important. They do not affect the page.
+
+In summary the following can be noted for File objects inherit from Blob.
+
+In addition to Blob methods and properties, Fileobjects also have name and lastModifiedproperties, plus the internal ability to read from filesystem. We usually get File objects from user input, like <input> or Drag’n’Drop events (ondragend).
+
+FileReader objects can read from a file or a blob, in one of three formats:
+
+String (readAsText).
+ArrayBuffer (readAsArrayBuffer).
+Data url, base-64 encoded (readAsDataURL).
+
+# Post Request
+
+To make a POST request, or a request with another method, we need to use fetch options:
+
+method – HTTP-method, e.g. POST,
+body – one of:
+a string (e.g. JSON),
+FormData object, to submit the data as form/multipart,
+Blob/BufferSource to send binary data,
+URLSearchParams, to submit the data in x-www-form-urlencoded encoding, rarely used.
+
+![Alt text](<submit Json.png>)
+
+# Sending an image
+
+Response properties:
+
+response.status – HTTP code of the response,
+
+response.ok – true is the status is 200-299.
+
+response.headers – Map-like object with HTTP headers.
+
+Methods to get response body:
+
+response.json() – parse the response as JSON object,
+
+response.text() – return the response as text,
+
+response.formData() – return the response as FormData object (form/multipart encoding, see the next chapter),
+
+response.blob() – return the response as Blob(binary data with type),
+
+response.arrayBuffer() – return the response as ArrayBuffer (pure binary data),
+
+Fetch options so far:
+
+method – HTTP-method,
+
+headers – an object with request headers (not any header is allowed),
+
+body – string, FormData, BufferSource, Blob or UrlSearchParams object to send.
 
