@@ -305,7 +305,7 @@ window.onunload = function() {
 
   fetch('/analytics', {
 
-    method: 'POST',
+    method: 'POST',git log
 
     body: "statistics",
 
