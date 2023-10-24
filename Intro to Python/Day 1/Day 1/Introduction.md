@@ -93,5 +93,16 @@ print("This is a\fFormfeed")
 print("This is a\vVertical Tab")
 print("This is a Unicode character: \u03B1")  # Greek small letter alpha
 print("This is a named Unicode character: \N{GREEK SMALL LETTER ALPHA}")
+```
+# Python Comments
 
+Comments in Python are used to provide explanations and documentation within the code. They are ignored by the Python interpreter and are intended for human readers to understand the code.
+
+## Single-Line Comments
+
+Single-line comments are used for brief explanations on a single line. They are created using the `#` symbol, and any text following `#` on the same line is considered a comment.
+
+```python
+# This is a single-line comment
+print("Hello, World")  # This is also a comment after code
 
