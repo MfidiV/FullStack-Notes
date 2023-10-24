@@ -4,6 +4,16 @@
 
 - A variable acts as a container to hold a different number of data items or values.
 
+## Variable Names
+
+- Variable names should be descriptive and meaningful, making the purpose of the variable clear.
+- Variable names are case-sensitive, meaning `myvar` and `MyVar` are considered different variables.
+- They must start with a letter (a-z, A-Z) or an underscore (_). They cannot start with a number.
+- Variable names can contain letters, numbers, and underscores. Avoid special characters or spaces.
+- Use lowercase letters with underscores for improved readability, following the snake_case convention (e.g., `total_amount`, `my_variable`).
+- For constants, use uppercase letters with underscores (e.g., `PI`, `MAX_VALUE`). While Python doesn't have true constants, this convention indicates that the variable should not be changed.
+
+
 ## Variable Declaration
 
 - Variables are declared by assigning a value to a name, e.g., 
