@@ -46,10 +46,38 @@ Regular expressions (regex or regexp) are powerful tools for pattern matching an
 ## Flags
 
 - `re.I` (or `re.IGNORECASE`): Makes pattern matching case-insensitive.
+```python
+import re
+
+text = "apple Apple aPPLe"
+pattern = r'apple'
+matches = re.findall(pattern, text, re.IGNORECASE)
+print(matches)  # Output: ['apple', 'Apple', 'aPPLe']
+```
+
+
 
 - `re.S` (or `re.DOTALL`): Allows the dot `.` to match any character, including a newline.
+```python
+import re
+
+text = "Line 1\nLine 2"
+pattern = r'.+'
+matches = re.findall(pattern, text, re.DOTALL)
+print(matches)  # Output: ['Line 1\nLine 2']
+
+```
 
 - `re.M` (or `re.MULTILINE`): Allows `^` and `$` to match the start/end of each line within multi-line text.
+```python
+import re
+
+text = "apple\nbanana\ncherry"
+pattern = r'^banana'
+matches = re.findall(pattern, text, re.MULTILINE)
+print(matches)  # Output: ['banana']
+
+```
 
 ## Common Regex Use Cases
 
