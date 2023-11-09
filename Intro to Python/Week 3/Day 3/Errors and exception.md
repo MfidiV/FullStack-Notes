@@ -178,7 +178,6 @@ else:
 You can create your own custom exceptions by creating a new class that inherits from the Exception class.
 
 ```python
-Copy code
 class CustomError(Exception):
     pass
 
