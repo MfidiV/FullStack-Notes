@@ -3,7 +3,6 @@
 
 ## What is a variable
 
-# What is a variable?
 + A variable is a name given to a memory location. It is the basic unit of storage in a program.
 + The value stored in a variable can be changed during program execution.
 + A variable is only a name given to a memory location; all the operations done on the variable effects that memory location.
